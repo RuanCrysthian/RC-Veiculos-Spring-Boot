@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import dsw.CarDealership.domain.Usuario;
-import dsw.CarDealership.service.spec.IUsuarioService;
+import dsw.RCVeiculos.domain.Usuario;
+import dsw.RCVeiculos.service.spec.IUsuarioService;
 
 @Controller
 @RequestMapping("/usuarios")

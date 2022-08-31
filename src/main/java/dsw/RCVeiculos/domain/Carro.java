@@ -44,7 +44,6 @@ public class Carro extends AbstractEntity<Long>{
 	private BigDecimal valor;  
 	
 	@OneToMany(mappedBy ="carro", cascade = CascadeType.REMOVE)
-	private List<Proposta> proposta;
 
 	public Loja getLoja() {
 		return loja;

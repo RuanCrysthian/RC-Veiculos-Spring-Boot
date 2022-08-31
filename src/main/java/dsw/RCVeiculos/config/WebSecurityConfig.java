@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.*;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import dsw.CarDealership.security.UsuarioDetailsServiceImpl;
+import dsw.RCVeiculos.security.UsuarioDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

@@ -12,12 +12,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import dsw.RCVeiculos.dao.CarroDAO;
 import dsw.RCVeiculos.dao.ClienteDAO;
 import dsw.RCVeiculos.dao.LojaDAO;
-import dsw.RCVeiculos.dao.PropostaDAO;
 import dsw.RCVeiculos.dao.UsuarioDAO;
 import dsw.RCVeiculos.domain.Carro;
 import dsw.RCVeiculos.domain.Cliente;
 import dsw.RCVeiculos.domain.Loja;
-import dsw.RCVeiculos.domain.Proposta;
 import dsw.RCVeiculos.domain.Usuario;
 
 @SpringBootApplication
@@ -28,7 +26,7 @@ public class RCVeiculosApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner demo(CarroDAO carroDAO, LojaDAO lojaDAO, PropostaDAO propostaDAO, ClienteDAO clienteDAO, UsuarioDAO usuarioDAO, BCryptPasswordEncoder encoder) {
+	public CommandLineRunner demo(CarroDAO carroDAO, LojaDAO lojaDAO, ClienteDAO clienteDAO, UsuarioDAO usuarioDAO, BCryptPasswordEncoder encoder) {
 		return (args) -> {
 			
 			//Usuarios
@@ -41,25 +39,25 @@ public class RCVeiculosApplication {
 			
 			//Lojas
 			Loja l1 = new Loja();
-			l1.setEmail("loja1");
+			l1.setEmail("loja 1");
 			l1.setPapel("LOJA");
 			l1.setSenha(encoder.encode("loja1"));
 			l1.setNome("loja1");
-			l1.setDescricao("Nada a dizer");
+			l1.setDescricao("Nada a dizer :)");
 			l1.setCnpj("1234589");
 			lojaDAO.save(l1);
 			
 			Loja l2 = new Loja();
-			l2.setEmail("loja2");
+			l2.setEmail("loja 2");
 			l2.setPapel("LOJA");
 			l2.setSenha(encoder.encode("loja2"));
 			l2.setNome("loja2");
-			l2.setDescricao("Nada a dizer");
+			l2.setDescricao("Nada a dizer :(");
 			l2.setCnpj("1234");
 			lojaDAO.save(l2);
 			
 			Loja l3 = new Loja();
-			l3.setEmail("loja3");
+			l3.setEmail("loja 3");
 			l3.setPapel("LOJA");
 			l3.setSenha(encoder.encode("loja3"));
 			l3.setNome("loja3");
@@ -68,7 +66,7 @@ public class RCVeiculosApplication {
 			lojaDAO.save(l3);
 			
 			Loja l4 = new Loja();
-			l4.setEmail("loja4");
+			l4.setEmail("loja 4");
 			l4.setPapel("LOJA");
 			l4.setSenha(encoder.encode("loja4"));
 			l4.setNome("loja4");
@@ -79,14 +77,13 @@ public class RCVeiculosApplication {
 			//Carros
 			Carro c1 = new Carro();
 			c1.setLoja(l1);
-			c1.setPlaca("1234asda");
+			c1.setPlaca("1234aSda");
 			c1.setModelo("Modelo 1");
 			c1.setChassi("asdasd");
 			c1.setAno(2000);
 			c1.setQuilometragem(200);
-			c1.setDescricao("algo a dizer?");
+			c1.setDescricao("Descrição?");
 			c1.setValor(BigDecimal.valueOf(200000));
-			c1.setFotos("caminho");
 			carroDAO.save(c1);
 			
 			Carro c2 = new Carro();
@@ -98,7 +95,6 @@ public class RCVeiculosApplication {
 			c2.setQuilometragem(200);
 			c2.setDescricao("algo a dizer?");
 			c2.setValor(BigDecimal.valueOf(200000));
-			c2.setFotos("caminho");
 			carroDAO.save(c2);
 			
 			Carro c3 = new Carro();
@@ -110,7 +106,6 @@ public class RCVeiculosApplication {
 			c3.setQuilometragem(200);
 			c3.setDescricao("algo a dizer?");
 			c3.setValor(BigDecimal.valueOf(20));
-			c3.setFotos("caminho");
 			carroDAO.save(c3);
 			
 			//Clientes
@@ -119,7 +114,7 @@ public class RCVeiculosApplication {
 			cl1.setPapel("CLIENTE");
 			cl1.setSenha(encoder.encode("cliente"));
 			cl1.setCpf("124564564");
-			cl1.setDataDeNascimento(LocalDate.parse("2000-02-02"));
+			cl1.setDataDeNascimento(LocalDate.parse("2000-02-01"));
 			cl1.setNome("Roberval");
 			cl1.setSexo("M");
 			cl1.setTelefone("123-5888");
@@ -141,7 +136,7 @@ public class RCVeiculosApplication {
 			cl2.setPapel("CLIENTE");
 			cl2.setSenha(encoder.encode("cliente3"));
 			cl2.setCpf("1245");
-			cl2.setDataDeNascimento(LocalDate.parse("2000-02-02"));
+			cl2.setDataDeNascimento(LocalDate.parse("2000-02-03"));
 			cl2.setNome("William");
 			cl2.setSexo("M");
 			cl2.setTelefone("123-5778");

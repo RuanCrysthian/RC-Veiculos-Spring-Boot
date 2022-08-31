@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import dsw.CarDealership.validation.UniqueCPF;
+import dsw.RCVeiculos.validation.UniqueEMAIL;
 
 @SuppressWarnings("serial")
 @Entity
@@ -23,7 +23,7 @@ public class Cliente extends Usuario{
 	@Column(nullable = false, length = 19)
 	private String nome;
 	@NotNull(message = "{NotNull.cliente.cpf}")
-	@UniqueCPF(message = "{NotUnique.cliente.cpf}")
+	@UniqueEMAIL(message = "{NotUnique.cliente.email}")
 	@Column(nullable = false, length = 19)
 	private String cpf;
 	@NotNull(message = "{NotNull.cliente.telefone}")
@@ -37,7 +37,6 @@ public class Cliente extends Usuario{
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataDeNascimento;
 	@OneToMany(mappedBy ="cliente", cascade = CascadeType.REMOVE)
-	private List<Proposta> proposta;
 
 	public String getCpf() {
 		return cpf;

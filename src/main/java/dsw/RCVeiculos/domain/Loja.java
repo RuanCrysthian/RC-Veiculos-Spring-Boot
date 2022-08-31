@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-import dsw.RCVeiculos.validation.UniqueCNPJ;
+import dsw.RCVeiculos.validation.UniqueEMAIL;
 
 @SuppressWarnings("serial")
 @Entity
@@ -19,7 +19,7 @@ public class Loja extends Usuario{
 	@Column(nullable = false, length = 64)
 	private String descricao;
 	@NotNull(message = "{NotNull.loja.cnpj}")
-	@UniqueCNPJ(message = "{NotUnique.loja.cnpj}")
+	@UniqueEMAIL(message = "{NotUnique.loja.email}")
 	@Column(nullable = false, length = 19, unique = true)
 	private String cnpj;
 	@OneToMany(mappedBy ="loja", cascade = CascadeType.REMOVE)
