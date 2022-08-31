@@ -9,22 +9,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import dsw.CarDealership.dao.CarroDAO;
-import dsw.CarDealership.dao.ClienteDAO;
-import dsw.CarDealership.dao.LojaDAO;
-import dsw.CarDealership.dao.PropostaDAO;
-import dsw.CarDealership.dao.UsuarioDAO;
-import dsw.CarDealership.domain.Carro;
-import dsw.CarDealership.domain.Cliente;
-import dsw.CarDealership.domain.Loja;
-import dsw.CarDealership.domain.Proposta;
-import dsw.CarDealership.domain.Usuario;
+import dsw.RCVeiculos.dao.CarroDAO;
+import dsw.RCVeiculos.dao.ClienteDAO;
+import dsw.RCVeiculos.dao.LojaDAO;
+import dsw.RCVeiculos.dao.PropostaDAO;
+import dsw.RCVeiculos.dao.UsuarioDAO;
+import dsw.RCVeiculos.domain.Carro;
+import dsw.RCVeiculos.domain.Cliente;
+import dsw.RCVeiculos.domain.Loja;
+import dsw.RCVeiculos.domain.Proposta;
+import dsw.RCVeiculos.domain.Usuario;
 
 @SpringBootApplication
-public class CarDealershipApplication {
+public class RCVeiculosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarDealershipApplication.class, args);
+		SpringApplication.run(RCVeiculosApplication.class, args);
 	}
 	
 	@Bean
