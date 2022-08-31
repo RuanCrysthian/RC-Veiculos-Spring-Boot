@@ -146,25 +146,6 @@ public class RCVeiculosApplication {
 			cl2.setSexo("M");
 			cl2.setTelefone("123-5778");
 			clienteDAO.save(cl2);
-			
-			//Propostas
-			Proposta p1 = new Proposta();
-			p1.setCarro(c1);
-			p1.setCliente(cl1);
-			p1.setCondPagamento("Dinheiro");
-			p1.setdataProposta(LocalDate.parse("2000-02-02"));
-			p1.setStatus("ACEITO");
-			p1.setValor(BigDecimal.valueOf(2000));
-			propostaDAO.save(p1);
-			
-			Proposta p2 = new Proposta();
-			p2.setCarro(c2);
-			p2.setCliente(cl1);
-			p2.setCondPagamento("Dinheiro");
-			p2.setdataProposta(LocalDate.parse("2000-02-02"));
-			p2.setStatus("ACEITO");
-			p2.setValor(BigDecimal.valueOf(2000));
-			propostaDAO.save(p2);
 	};
 	
 	}
