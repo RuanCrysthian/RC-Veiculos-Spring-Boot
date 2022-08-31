@@ -46,10 +46,7 @@
 					<th th:text="Quilometragem"></th>
 					<th th:text="Descrição"></th>
 					<th th:text="Valor"></th>
-					<th th:text="Fotos"></th>
-					<div sec:authorize="hasAuthority('CLIENTE')">
-						<th>Ações</th>
-					</div>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -63,7 +60,6 @@
 					<td th:text="${carro.quilometragem}"></td>
 					<td th:text="${carro.descricao}"></td>
 					<td th:text="${carro.valor}"></td>
-					<td th:text="${carro.fotos}"></td>
 				</tr>
 			</tbody>
 		</table>
