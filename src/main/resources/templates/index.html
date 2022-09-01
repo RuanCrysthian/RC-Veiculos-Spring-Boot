@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div sec:authorize="!isAuthenticated()">
-	    <a th:href="@{/login}">Fazer Login</a>
+	    <a th:href="@{/login}">Fazer Login</a> <br/>
     	<a th:href="@{/carros/listar}">Listar Veículos</a>
 	</div>
 	<div sec:authorize="hasAuthority('LOJA')">
@@ -28,11 +28,11 @@
 	<div sec:authorize="hasAuthority('ADMIN')">
 		<ul>
             <li>
-            	<a th:href="@{/usuarios/listar}">Listar Usuarios</a>
-            	<a th:href="@{/lojas/listar}">Listar Lojas</a>
-            	<a th:href="@{/clientes/listar}">Listar Clientes</a>
-            	<a th:href="@{/clientes/cadastrar}">Cadastrar Cliente</a>
-            	<a th:href="@{/lojas/cadastrar}">Cadastrar Loja</a>
+            	<a th:href="@{/usuarios/listar}">Listar Usuarios</a> <br/>
+            	<a th:href="@{/lojas/listar}">Listar Lojas</a> <br/>
+            	<a th:href="@{/clientes/listar}">Listar Clientes</a> <br/>
+            	<a th:href="@{/clientes/cadastrar}">Cadastrar Cliente</a> <br/>
+            	<a th:href="@{/lojas/cadastrar}">Cadastrar Loja</a> <br/> <br/> <br/>
             	<form th:action="@{/logout}" method="post">
             		<input type="submit" value="Sign Out"/>
         		</form>

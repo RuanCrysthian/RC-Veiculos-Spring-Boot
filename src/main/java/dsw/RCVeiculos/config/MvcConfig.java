@@ -15,8 +15,9 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 public class MvcConfig implements WebMvcConfigurer {
 
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/index").setViewName("index");
 		registry.addViewController("/").setViewName("index");
+        registry.addViewController("/index").setViewName("index");
+		registry.addViewController("/login").setViewName("");
 	}
 
     @Bean
