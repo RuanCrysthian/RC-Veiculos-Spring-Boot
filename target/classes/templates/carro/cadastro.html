@@ -35,6 +35,8 @@
 			<span th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}" class="text-danger"></span>
 			<input type="text" th:field="*{valor}" placeholder="valor" class="form-control mb-4 col-4" required="required">
 			
+			<span th:if="${#fields.hasErrors('fotos')}" th:errors="*{fotos}" class="text-danger"></span>
+			<input type="text" th:field="*{fotos}" placeholder="fotos" class="form-control mb-4 col-4" required="required">
 			
 			<button type="submit" class="btn btn-info col-2">Salvar</button>
 		</form>

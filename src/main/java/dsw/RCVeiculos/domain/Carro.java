@@ -42,8 +42,10 @@ public class Carro extends AbstractEntity<Long>{
 	@NotNull(message = "{NotNull.carro.valor}")
 	@Column(columnDefinition = "DECIMAL(8,2) DEFAULT 0.0")
 	private BigDecimal valor;  
+	@Column(nullable = false, length = 19)
+	private String fotos;
 	
-	@OneToMany(mappedBy ="carro", cascade = CascadeType.REMOVE)
+	
 
 	public Loja getLoja() {
 		return loja;
@@ -109,5 +111,11 @@ public class Carro extends AbstractEntity<Long>{
 		this.valor = valor;
 	}
 
+	public String getFotos() {
+		return fotos;
+	}
 
+	public void setFotos(String fotos) {
+		this.fotos = fotos;
+	}
 }
