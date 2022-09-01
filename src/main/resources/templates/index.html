@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity">
 <head>
@@ -33,7 +33,6 @@
             	<a th:href="@{/clientes/listar}">Listar Clientes</a>
             	<a th:href="@{/clientes/cadastrar}">Cadastrar Cliente</a>
             	<a th:href="@{/lojas/cadastrar}">Cadastrar Loja</a>
-            	<a th:href="@{/usuarios/cadastrar}">Cadastrar Admin</a>
             	<form th:action="@{/logout}" method="post">
             		<input type="submit" value="Sign Out"/>
         		</form>
