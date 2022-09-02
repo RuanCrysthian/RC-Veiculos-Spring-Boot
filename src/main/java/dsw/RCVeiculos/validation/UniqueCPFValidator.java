@@ -18,7 +18,7 @@ public class UniqueCPFValidator implements ConstraintValidator<UniqueCPF, String
 	@Override
 	public boolean isValid(String cpf, ConstraintValidatorContext context) {
 		if (dao != null) {
-			Cliente cliente = dao.findByCPF(cpf);
+			Cliente cliente = dao.findBycpf(cpf);
 			return cliente == null;
 		} else {
 			// Durante a execução da classe LivrariaMvcApplication

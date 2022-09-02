@@ -8,11 +8,11 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Constraint(validatedBy = UniqueCPFValidator.class)
+@Constraint(validatedBy = UniqueCNPJValidator.class)
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface UniqueCPF {
-    String message() default "CPF is already registered";
+public @interface UniqueCNPJ {
+    String message() default "CNPJ is already registered";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
 }

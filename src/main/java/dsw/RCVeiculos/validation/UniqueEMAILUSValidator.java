@@ -14,17 +14,16 @@ import dsw.RCVeiculos.domain.Loja;
 import dsw.RCVeiculos.domain.Usuario;
 
 @Component
-public class UniqueEMAILValidator implements ConstraintValidator<UniqueEMAIL, String> {
+public class UniqueEMAILUSValidator implements ConstraintValidator<UniqueEMAILUS, String> {
 
 	@Autowired
-	private LojaDAO dao;
 	private UsuarioDAO daoU;
 
 	@Override
 	public boolean isValid(String email, ConstraintValidatorContext context) {
-		if (dao != null || daoU != null) {
-			Loja loja = dao.findByemail(email);
-			return loja == null;
+		if (daoU != null || daoU != null) {
+			Usuario usuario = daoU.findByemail(email);
+			return usuario == null;
 		} else {
 			// Durante a execução da classe LivrariaMvcApplication
 			// não há injeção de dependência

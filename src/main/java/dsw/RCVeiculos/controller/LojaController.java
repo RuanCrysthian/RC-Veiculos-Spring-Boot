@@ -80,8 +80,6 @@ public class LojaController {
 	
 	@PostMapping("/editar")
 	public String editar(@Valid Loja loja, BindingResult result, RedirectAttributes attr) {
-		
-
 		service.salvar(loja);
 		attr.addFlashAttribute("sucess", "loja.edit.sucess");
 		return "redirect:/lojas/listar";

@@ -5,21 +5,21 @@ import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-import dsw.RCVeiculos.validation.UniqueEMAIL;
+import dsw.RCVeiculos.validation.UniqueCNPJ;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "Loja")
 public class Loja extends Usuario{
 	
-	@NotNull(message = "{NotNull.loja.nome}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 19)
 	private String nome;
-	@NotNull(message = "{NotNull.loja.descricao}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 64)
 	private String descricao;
-	@NotNull(message = "{NotNull.loja.cnpj}")
-	@UniqueEMAIL(message = "{NotUnique.loja.email}")
+	@NotNull(message = "Campo obrigatório.")
+	@UniqueCNPJ(message = "CNPJ já cadastrado.")
 	@Column(nullable = false, length = 19, unique = true)
 	private String cnpj;
 	@OneToMany(mappedBy ="loja", cascade = CascadeType.REMOVE)

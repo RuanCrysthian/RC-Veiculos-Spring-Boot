@@ -21,6 +21,5 @@ public interface UsuarioDAO extends CrudRepository<Usuario, Long>{
 	@Query("SELECT u FROM Usuario u WHERE u.email = :email")
     public Usuario getUserByUsername(@Param("email") String email);
 
-	@Query("SELECT u FROM Usuario u WHERE u.email = :email")
-    Usuario findByEmail(@Param("email") String email);
+    Usuario findByemail(String email);
 }

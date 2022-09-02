@@ -6,24 +6,20 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import dsw.RCVeiculos.dao.ClienteDAO;
+
 import dsw.RCVeiculos.dao.LojaDAO;
-import dsw.RCVeiculos.dao.UsuarioDAO;
-import dsw.RCVeiculos.domain.Cliente;
 import dsw.RCVeiculos.domain.Loja;
-import dsw.RCVeiculos.domain.Usuario;
 
 @Component
-public class UniqueEMAILValidator implements ConstraintValidator<UniqueEMAIL, String> {
+public class UniqueCNPJValidator implements ConstraintValidator<UniqueCNPJ, String> {
 
 	@Autowired
 	private LojaDAO dao;
-	private UsuarioDAO daoU;
 
 	@Override
-	public boolean isValid(String email, ConstraintValidatorContext context) {
-		if (dao != null || daoU != null) {
-			Loja loja = dao.findByemail(email);
+	public boolean isValid(String CNPJ, ConstraintValidatorContext context) {
+		if (dao != null) {
+			Loja loja = dao.findBycnpj(CNPJ);
 			return loja == null;
 		} else {
 			// Durante a execução da classe LivrariaMvcApplication
@@ -32,5 +28,4 @@ public class UniqueEMAILValidator implements ConstraintValidator<UniqueEMAIL, St
 		}
 
 	}
-	
 }
