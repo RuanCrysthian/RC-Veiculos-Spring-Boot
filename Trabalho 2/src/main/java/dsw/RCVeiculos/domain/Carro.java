@@ -21,6 +21,7 @@ public class Carro extends AbstractEntity<Long>{
 	@ManyToOne
 	@JoinColumn(name = "id_loja")
 	private Loja loja;
+	@UniquePlaca(message = "Placa já cadastrada.")
 	@NotBlank(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 19)
 	private String placa;
