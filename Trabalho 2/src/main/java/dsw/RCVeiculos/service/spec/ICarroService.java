@@ -12,6 +12,4 @@ public interface ICarroService {
 	void salvar(Carro carro);
 	
 	void excluir(Long id);
-	
-	Carro findByPlaca(String placa);
 }

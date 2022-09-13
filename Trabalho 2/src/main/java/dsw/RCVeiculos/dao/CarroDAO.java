@@ -16,6 +16,4 @@ public interface CarroDAO extends CrudRepository<Carro, Long>{
 	Carro save(Carro c);
 	
 	void deleteById(Long id);
-	
-	Loja findByPlaca(String placa);
 }
