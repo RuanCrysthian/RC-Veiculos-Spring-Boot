@@ -100,7 +100,6 @@ public class CarroRestController {
 	@GetMapping(path = "/carros/modelos/{modelo}")
 	public ResponseEntity<List<Carro>> listaPorLoja(@PathVariable("modelo") String modelo) {
 		
-        //ainda tá com erro, provavelmente tem que editar o service
 		List<Carro> lista = service.buscaPorModelo(modelo);
 		
 		if (lista.isEmpty()) {

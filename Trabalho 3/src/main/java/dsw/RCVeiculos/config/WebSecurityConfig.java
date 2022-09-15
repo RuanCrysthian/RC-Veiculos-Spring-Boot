@@ -47,8 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable().authorizeRequests()
 				.antMatchers("/clientes", "/lojas").permitAll()
 				.antMatchers("/clientes/{\\d+}", "/lojas/{\\d+}").permitAll()
-				.antMatchers("/propostas/carros/{\\d+}").permitAll()
-				.antMatchers("/propostas/clientes/{\\d+}").permitAll()
 				.antMatchers("/carros/lojas/{\\d+}").permitAll()
 				.antMatchers("/carros/modelos/{\\w+}").permitAll()
 				.anyRequest().authenticated()
