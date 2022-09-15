@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 import dsw.RCVeiculos.domain.Carro;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 
 @SuppressWarnings("unchecked")
 public interface CarroDAO extends CrudRepository<Carro, Long>{
