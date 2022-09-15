@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 import dsw.RCVeiculos.domain.Carro;
 import dsw.RCVeiculos.domain.Loja;
 import dsw.RCVeiculos.service.spec.ICarroService;
@@ -100,6 +99,7 @@ public class CarroRestController {
 	@GetMapping(path = "/carros/modelos/{modelo}")
 	public ResponseEntity<List<Carro>> listaPorLoja(@PathVariable("modelo") String modelo) {
 		
+        //ainda tá com erro, provavelmente tem que editar o service
 		List<Carro> lista = service.buscaPorModelo(modelo);
 		
 		if (lista.isEmpty()) {

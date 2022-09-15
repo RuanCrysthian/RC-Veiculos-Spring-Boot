@@ -12,7 +12,7 @@ import javax.validation.Payload;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UniqueCPF {
-    String message() default "CPF is already registered";
+    String message() default "CPF ja foi cadastrado.";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
 }

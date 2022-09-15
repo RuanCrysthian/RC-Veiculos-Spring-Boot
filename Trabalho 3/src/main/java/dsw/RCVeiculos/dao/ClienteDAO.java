@@ -18,6 +18,6 @@ public interface ClienteDAO extends CrudRepository<Cliente, Long>{
 
 	void deleteById(Long id);
 
-	//@Query("SELECT cliente FROM Cliente cliente WHERE cliente.cpf = :cpf")
-	Cliente findBycpf(String cpf);
+	@Query("SELECT cliente FROM Cliente cliente WHERE cliente.cpf = :cpf")
+	Cliente findByCPF(@Param ("cpf") String cpf);
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import dsw.RCVeiculos.domain.Cliente;
-import dsw.RCVeiculos.service.spec.IClienteService;
+import dsw.RCVeiculos.service.spec.IClienteService;;
 
 @Controller
 @RequestMapping("/clientes")

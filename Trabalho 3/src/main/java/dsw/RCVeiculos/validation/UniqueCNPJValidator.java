@@ -6,7 +6,6 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
 import dsw.RCVeiculos.dao.LojaDAO;
 import dsw.RCVeiculos.domain.Loja;
 
@@ -19,7 +18,7 @@ public class UniqueCNPJValidator implements ConstraintValidator<UniqueCNPJ, Stri
 	@Override
 	public boolean isValid(String CNPJ, ConstraintValidatorContext context) {
 		if (dao != null) {
-			Loja loja = dao.findBycnpj(CNPJ);
+			Loja loja = dao.findByCNPJ(CNPJ);
 			return loja == null;
 		} else {
 			// Durante a execução da classe LivrariaMvcApplication

@@ -17,35 +17,36 @@ import javax.validation.constraints.NotNull;
 @Table(name = "Carro")
 public class Carro extends AbstractEntity<Long>{
 	
-	@NotNull(message = "Selecione uma loja.")
+	@NotNull(message = "{NotNull.carro.loja}")
 	@ManyToOne
 	@JoinColumn(name = "id_loja")
 	private Loja loja;
-	@NotBlank(message = "Campo obrigatório.")
+	@NotBlank(message = "{NotBlank.carro.placa}")
 	@Column(nullable = false, length = 19)
 	private String placa;
-	@NotBlank(message = "Campo obrigatório.")
+	@NotBlank(message = "{NotBlank.carro.modelo}")
 	@Column(nullable = false, length = 19)
 	private String modelo; 
-	@NotBlank(message = "Campo obrigatório.")
+	@NotBlank(message = "{NotBlank.carro.chassi}")
 	@Column(nullable = false, length = 19)
 	private String chassi; 
-	@NotNull(message = "Selecione o ano.")
+	@NotNull(message = "{NotNull.carro.ano}")
 	@Column(nullable = false, length = 19)
 	private Integer ano;
-	@NotNull(message = "Selecione a quilometragem.")
+	@NotNull(message = "{NotNull.carro.quilometragem}")
 	@Column(nullable = false, length = 19)
 	private Integer quilometragem;  
-	@NotBlank(message = "Campo obrigatório.")
+	@NotBlank(message = "{NotBlank.carro.descricao}")
 	@Column(nullable = false, length = 19)
 	private String descricao;
-	@NotNull(message = "Campo obrigatório.")
+	@NotNull(message = "{NotNull.carro.valor}")
 	@Column(columnDefinition = "DECIMAL(8,2) DEFAULT 0.0")
 	private BigDecimal valor;  
 	@Column(nullable = false, length = 19)
 	private String fotos;
 	
-	
+	@OneToMany(mappedBy ="carro", cascade = CascadeType.REMOVE)
+	private List<Proposta> proposta;
 
 	public Loja getLoja() {
 		return loja;
@@ -119,3 +120,4 @@ public class Carro extends AbstractEntity<Long>{
 		this.fotos = fotos;
 	}
 }
+

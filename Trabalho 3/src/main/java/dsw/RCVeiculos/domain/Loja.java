@@ -12,14 +12,14 @@ import dsw.RCVeiculos.validation.UniqueCNPJ;
 @Table(name = "Loja")
 public class Loja extends Usuario{
 	
-	@NotNull(message = "Campo obrigatório.")
+	@NotNull(message = "{NotNull.loja.nome}")
 	@Column(nullable = false, length = 19)
 	private String nome;
-	@NotNull(message = "Campo obrigatório.")
+	@NotNull(message = "{NotNull.loja.descricao}")
 	@Column(nullable = false, length = 64)
 	private String descricao;
-	@NotNull(message = "Campo obrigatório.")
-	@UniqueCNPJ(message = "CNPJ já cadastrado.")
+	@NotNull(message = "{NotNull.loja.cnpj}")
+	@UniqueCNPJ(message = "{NotUnique.loja.cnpj}")
 	@Column(nullable = false, length = 19, unique = true)
 	private String cnpj;
 	@OneToMany(mappedBy ="loja", cascade = CascadeType.REMOVE)

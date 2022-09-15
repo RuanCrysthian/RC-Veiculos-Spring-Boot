@@ -12,7 +12,7 @@ import javax.validation.Payload;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UniqueEMAIL {
-    String message() default "Email is already registered";
+    String message() default "Email ja foi cadastrado.";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
 }

@@ -2,7 +2,9 @@ package dsw.RCVeiculos.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 
 import dsw.RCVeiculos.domain.Loja;
 
@@ -17,8 +19,11 @@ public interface LojaDAO extends CrudRepository<Loja, Long>{
 	
 	void deleteById(Long id);
 	
-	Loja findBycnpj(String cnpj);
+	@Query("SELECT l FROM Loja l WHERE l.cnpj = :cnpj")
+	Loja findByCNPJ(@Param ("cnpj") String cnpj);
 	
-	Loja findByemail(String email);
+	@Query("SELECT l FROM Loja l WHERE l.email = :email")
+	Loja findByemail(@Param("email") String email);
 	
 }
+

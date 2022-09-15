@@ -14,6 +14,4 @@ public interface IUsuarioService {
 	void excluir(Long id);
 	
 	Usuario buscaUsuario(String email);
-	
-	Usuario buscarPorEmail(String email);
 }

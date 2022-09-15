@@ -1,34 +1,42 @@
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueCPF.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueEMAIL.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/domain/Carro.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/domain/Loja.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/controller/CarroController.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueEMAILValidator.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/dao/ClienteDAO.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueCNPJValidator.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueEMAILUSValidator.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueEMAILUS.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/RCVeiculosApplication.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/spec/IClienteService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueCNPJ.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/spec/ICarroService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/controller/ClienteController.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/imple/UsuarioService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/domain/Usuario.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/controller/UsuarioController.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/imple/CarroService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/domain/AbstractEntity.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/security/UsuarioDetailsServiceImpl.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/config/WebSecurityConfig.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/dao/LojaDAO.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/controller/LojaController.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/domain/Cliente.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/spec/IUsuarioService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/config/MvcConfig.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/validation/UniqueCPFValidator.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/imple/ClienteService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/dao/UsuarioDAO.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/spec/ILojaService.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/dao/CarroDAO.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/security/UsuarioDetails.java
-/home/ruan/Documentos/UFSCar/DSW 1/RCVeiculos/RC-Veiculos-Spring-Boot/src/main/java/dsw/RCVeiculos/service/imple/LojaService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/impl/PropostaService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueCPF.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/impl/LojaService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueEMAIL.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/impl/UsuarioService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/spec/ILojaService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/AbstractEntity.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/dao/UsuarioDAO.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/impl/ClienteService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/PropostaRestController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/CarroRestController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/spec/ICarroService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/spec/IUsuarioService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/dao/ClienteDAO.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/Loja.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueEMAILValidator.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/spec/IPropostaService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/impl/CarroService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/security/UsuarioDetails.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/LojaRestController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/RCVeiculosApplication.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/config/MvcConfig.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/CarroController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/dao/PropostaDAO.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/Cliente.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueCNPJValidator.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueCNPJ.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/dao/LojaDAO.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/Proposta.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/Usuario.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/PropostaController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/LojaController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/validation/UniqueCPFValidator.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/domain/Carro.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/UsuarioController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/service/spec/IClienteService.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/dao/CarroDAO.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/ClienteController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/config/WebSecurityConfig.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/MyErrorController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/controller/ClienteRestController.java
+/home/ruan/Downloads/dsw-1-main/trab3/RCVeiculos/src/main/java/dsw/RCVeiculos/security/UsuarioDetailsServiceImpl.java

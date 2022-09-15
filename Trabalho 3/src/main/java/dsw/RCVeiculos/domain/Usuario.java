@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import dsw.RCVeiculos.validation.UniqueEMAIL;
-import dsw.RCVeiculos.validation.UniqueEMAILUS;
 
 @SuppressWarnings("serial")
 @Entity
@@ -12,16 +11,16 @@ import dsw.RCVeiculos.validation.UniqueEMAILUS;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario extends AbstractEntity<Long> {
 	
-	@NotNull(message = "Campo obrigatório.")
-	@UniqueEMAILUS(message = "E-mail já cadastrado.")
-	@Column(nullable = false, unique = true, length = 80)
+	@NotNull(message = "{NotNull.usuario.email}")
+	@UniqueEMAIL(message = "{NotUnique.usuario.email}")
+	@Column(nullable = false, unique = true, length = 19)
 	private String email;
 	
-	@NotNull(message = "Campo obrigatório.")
+	@NotNull(message = "{NotNull.usuario.senha}")
 	@Column(nullable = false, length = 64)
 	private String senha;
 	
-	@NotNull(message = "Campo obrigatório.")
+	@NotNull(message = "{NotNull.usuario.papel}")
 	@Column(nullable = false, length = 19)
 	private String papel;
 

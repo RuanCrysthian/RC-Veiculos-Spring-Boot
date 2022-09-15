@@ -119,7 +119,7 @@ public class ClienteRestController {
  }
 
 	@DeleteMapping(path = "/clientes/{id}")
-	public ResponseEntity<Boolean> remove(@PathVariable("id") long id) {
+ public ResponseEntity<Boolean> remove(@PathVariable("id") long id) {
 
 		Cliente cliente = service.buscarPorId(id);
 		if (cliente == null) {

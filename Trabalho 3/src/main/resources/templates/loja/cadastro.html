@@ -13,12 +13,12 @@
 			
 			<p>
 				<label for="email">Email:</label> 
-				<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger">EMAIL INVÁLIDO</span>
+				<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
 				<input th:if="${loja.id != null}" readonly type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4" required>
 				<input th:if="${loja.id == null}" type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4" required>
 				
 				<label for="senha">| Senha:</label> 
-				<span th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}" class="text-danger">SENHA INVÁLIDA</span>
+				<span th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}" class="text-danger"></span>
 				<input type="password" th:field="*{senha}" placeholder="Senha" class="form-control mb-4 col-4" required>
 			</p>
 				<label for="papel">Papel:</label> 
@@ -28,15 +28,15 @@
 				</select>
 			<p>
 				<label for="nome">Nome:</label> 
-	      		<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger">CAMPO OBRIGATÓRIO</span>
+	      		<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger"></span>
 				<input type="text" th:field="*{nome}" placeholder="Nome" class="form-control mb-4 col-4" required>
 			</p>
 	      		<label for="descricao">Descricao:</label> 
-	      		<span th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}" class="text-danger">CAMPO OBRIGATÓRIO</span>
+	      		<span th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}" class="text-danger"></span>
 				<input type="text" th:field="*{descricao}" placeholder="Descricao" class="form-control mb-4 col-4" required>
 			<p>
 				<label for="cnpj">CNPJ:</label> 
-				<span th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}" class="text-danger">CNPJ JÁ CADASTRADO</span>
+				<span th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}" class="text-danger"></span>
 				<input th:if="${loja.id != null}" readonly type="number" th:field="*{cnpj}" placeholder="CNPJ" class="form-control mb-4 col-4" required>
 				<input th:if="${loja.id == null}" type="number" th:field="*{cnpj}" placeholder="CNPJ" class="form-control mb-4 col-4" required>
 			

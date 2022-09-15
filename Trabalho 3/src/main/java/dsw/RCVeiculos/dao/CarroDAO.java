@@ -25,3 +25,4 @@ public interface CarroDAO extends CrudRepository<Carro, Long>{
 	@Query("Select c FROM Carro c WHERE c.modelo =:modelo")
 	List<Carro> findByModelo(@Param("modelo") String modelo);
 }
+
