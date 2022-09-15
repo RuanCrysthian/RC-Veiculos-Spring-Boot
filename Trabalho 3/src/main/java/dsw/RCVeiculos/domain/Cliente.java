@@ -13,31 +13,31 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import dsw.RCVeiculos.validation.UniqueCPF;
+import dsw.RCVeiculos.validation.UniqueEMAIL;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "Cliente")
 public class Cliente extends Usuario{
 	
-	@NotNull(message = "{NotNull.cliente.nome}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 19)
 	private String nome;
-	@NotNull(message = "{NotNull.cliente.cpf}")
-	@UniqueCPF(message = "{NotUnique.cliente.cpf}")
-	@Column(nullable = false, length = 19)
+	@NotNull(message = "Campo obrigatório.")
+	@UniqueCPF(message = "CPF já cadastrado.")
+	@Column(nullable = false, length = 19,unique = true)
 	private String cpf;
-	@NotNull(message = "{NotNull.cliente.telefone}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 19)
 	private String telefone;
-	@NotNull(message = "{NotNull.cliente.sexo}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 19)
 	private String sexo;
-	@NotNull(message = "{NotNull.cliente.dataDeNascimento}")
+	@NotNull(message = "Campo obrigatório.")
 	@Column(nullable = false, length = 30)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataDeNascimento;
 	@OneToMany(mappedBy ="cliente", cascade = CascadeType.REMOVE)
-	private List<Proposta> proposta;
 
 	public String getCpf() {
 		return cpf;

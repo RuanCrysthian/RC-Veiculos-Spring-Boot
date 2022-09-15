@@ -15,7 +15,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import dsw.RCVeiculos.domain.Loja;
 import dsw.RCVeiculos.service.spec.ILojaService;
-import dsw.RCVeiculos.service.spec.IPropostaService;
 import dsw.RCVeiculos.service.spec.ICarroService;
 
 @Controller
@@ -28,8 +27,6 @@ public class LojaController {
 	@Autowired
 	private ICarroService serviceCarro;
 	
-	@Autowired
-	private IPropostaService serviceProposta;
 	
 	@Autowired
 	private BCryptPasswordEncoder encoder;
@@ -51,11 +48,6 @@ public class LojaController {
 		return "loja/listaCarro";
 	}
 	
-	@GetMapping("/listarProposta")
-	public String listarProposta(ModelMap model) {
-		model.addAttribute("propostas", serviceProposta.buscarTodos());
-		return "loja/listaProposta";
-	}
 	
 	@PostMapping("/salvar")
 	public String salvar(@Valid Loja loja, BindingResult result, RedirectAttributes attr) {
@@ -88,13 +80,6 @@ public class LojaController {
 	
 	@PostMapping("/editar")
 	public String editar(@Valid Loja loja, BindingResult result, RedirectAttributes attr) {
-		
-		// Apenas rejeita se o problema não for com o CNPJ (CNPJ campo read-only) 
-		
-		
-		
-		System.out.println(loja.getSenha());
-
 		service.salvar(loja);
 		attr.addFlashAttribute("sucess", "loja.edit.sucess");
 		return "redirect:/lojas/listar";

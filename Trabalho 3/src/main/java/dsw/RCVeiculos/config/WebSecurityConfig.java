@@ -1,15 +1,18 @@
 package dsw.RCVeiculos.config;
 
-import org.springframework.context.annotation.*;
-import org.springframework.security.authentication.dao.*;
-import org.springframework.security.config.annotation.authentication.builders.*;
-import org.springframework.security.config.annotation.web.builders.*;
-import org.springframework.security.config.annotation.web.configuration.*;
-import org.springframework.security.core.userdetails.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import dsw.RCVeiculos.security.UsuarioDetailsServiceImpl;
 
+@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -40,16 +43,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
-		http.csrf().disable().authorizeRequests()
-				.antMatchers("/clientes", "/lojas").permitAll()
-				.antMatchers("/clientes/{\\d+}", "/lojas/{\\d+}").permitAll()
-				.antMatchers("/propostas/carros/{\\d+}").permitAll()
-				.antMatchers("/propostas/clientes/{\\d+}").permitAll()
-				.antMatchers("/carros/lojas/{\\d+}").permitAll()
-				.antMatchers("/carros/modelos/{\\w+}").permitAll()
+		http.authorizeRequests()
+				.antMatchers("/", "/index", "/error","/carros/listar").permitAll()
+				.antMatchers("/propostas/**","/carros/**").hasAnyAuthority("CLIENTE","LOJA")
+				.antMatchers("/usuarios/**", "/admin/**","/admins/**").hasAuthority("ADMIN")
+				.antMatchers("/lojas/**").hasAnyAuthority("LOJA","ADMIN")
+				.antMatchers("/login/**", "/js/**", "/css/**", "/image/**", "/webjars/**").permitAll()
 				.anyRequest().authenticated()
-				.and().formLogin().loginPage("/login").permitAll()
-				.and().logout().logoutSuccessUrl("/").permitAll();
+			.and()
+				.formLogin()
+				.loginPage("/login")
+				.permitAll()
+			.and()
+				.logout()
+				.logoutSuccessUrl("/")
+				.permitAll();
 	}
 }

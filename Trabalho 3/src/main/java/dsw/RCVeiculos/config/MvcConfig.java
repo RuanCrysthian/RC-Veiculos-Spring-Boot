@@ -15,8 +15,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 public class MvcConfig implements WebMvcConfigurer {
 
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/index").setViewName("index");
 		registry.addViewController("/").setViewName("index");
+        registry.addViewController("/index").setViewName("index");
 		registry.addViewController("/login").setViewName("login");
 	}
 
@@ -37,10 +37,5 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
-    }
-    
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new BigDecimalConversor());
     }
 }
