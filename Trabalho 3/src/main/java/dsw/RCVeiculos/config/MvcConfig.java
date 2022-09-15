@@ -17,7 +17,7 @@ public class MvcConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/index").setViewName("index");
 		registry.addViewController("/").setViewName("index");
-		registry.addViewController("/hello").setViewName("hello");
+		registry.addViewController("/login").setViewName("login");
 	}
 
     @Bean
@@ -37,5 +37,10 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
+    }
+    
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(new BigDecimalConversor());
     }
 }
